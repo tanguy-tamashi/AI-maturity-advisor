@@ -1,1 +1,1 @@
-# AI-maturity-advisor
+# Linkedin content generator
