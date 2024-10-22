@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- The chatbot container -->
     <div id="chat-window" class="chat-window"></div>
     <script type="module">
         import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
@@ -16,7 +15,6 @@
             chatflowid: "671b93ec-0ce9-42e0-9f3d-00cf00bb6b6d",
             apiHost: "https://flowiseai-railway-production-7641.up.railway.app",
             chatflowConfig: {
-                // topK: 2
             },
             theme: {
                 button: {
@@ -48,12 +46,9 @@
                     welcomeMessage: 'Give me your company name, your audience and your objective. I'll create a marketing strategy and give you 4 Linkedin articles to reach your goals 🚀🎯',
                     errorMessage: 'I did not understand',
                     backgroundColor: "#ffffff",
-                    backgroundImage: 'enter image path or link', // If set, this will overlap the background color of the chat window.
                     height: 700,
                     width: 500,
                     fontSize: 16,
-                    //starterPrompts: ['What is a bot?', 'Who are you?'], // It overrides the starter prompts set by the chat flow passed
-                    starterPromptFontSize: 15,
                     clearChatOnReload: true, // If set to true, the chat will be cleared when the page reloads.
                     botMessage: {
                         backgroundColor: "#f7f8ff",
@@ -64,7 +59,7 @@
                     userMessage: {
                         backgroundColor: "#3B81F6",
                         textColor: "#ffffff",
-                        showAvatar: true,
+                        showAvatar: false,
                         avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
                     },
                     textInput: {
@@ -72,8 +67,7 @@
                         backgroundColor: '#ffffff',
                         textColor: '#303235',
                         sendButtonColor: '#3B81F6',
-                        maxChars: 50,
-                        maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+                        maxChars: 1000,
                         autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
                         sendMessageSound: true,
                         // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
